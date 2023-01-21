@@ -1,0 +1,129 @@
+/* Default Styling */
+
+:root {
+  --header-blue: #2777cc;
+  --background: #70a9e6;
+  --text-color: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background, blue);
+    text-align: center;
+    color: var(--text-color, white);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Header */
+  
+  header {
+    background: var(--header-blue, blue);
+    width: 100%;
+  }
+  
+  header h1 {
+    font-family: 'Staatliches', cursive;
+  }
+  
+  /* Main */
+  
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main h3 {
+    background: #5a8cdb;
+    max-width: 45rem;
+    color: white;
+    padding: 0.5rem;
+    border: 0.2rem solid black;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  
+  main ul {
+    text-align: left;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  
+  main li {
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.8rem;
+    margin-top: 1.8rem;
+    max-width: 1600px;
+    font-weight: bold;
+  }
+
+  img {
+    height: 300px;
+    width: 500px;
+    border: 0.3rem solid black;
+    margin-top: 7.5rem;
+  }
+
+  main li:last-of-type,
+  main img:last-of-type {
+    margin-bottom: 3rem;
+  }
+
+  
+  /* Footer */
+  
+  footer {
+    background: var(--header-blue, blue);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  footer h2 {
+    padding: 0.5rem;
+  }
+  
+  footer button {
+    border: 0.15rem solid black;
+    background: var(--background, blue);
+    padding: 0.2rem 0.5rem;
+    transition: background 1s, color, 1s;
+  }
+
+  footer a {
+    color: var(--text-color, white);
+    font-size: 1.2em;
+    text-decoration: unset;
+    font-weight: bold;
+  }
+  
+  footer button:hover {
+    cursor: pointer;
+    background: white;
+    color: var(--background, blue);
+  }
+  
+  /* Media query */
+
+  @media screen and (max-width: 1050px) {
+    main {
+      flex-direction: column;
+    }
+ }
